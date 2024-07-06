@@ -11,11 +11,10 @@ function addBookToLibrary() {
   var readInput = prompt("Have you read it?");
   Book(titleInput, authorInput, pagesInput, readInput);
   console.table(myLibrary);
-  const card = document.createElement("li");
-  myLibrary.forEach((item) => {
-    card.innerText = item;
-    document.getElementById("bookList").appendChild(card);
-  });
+  var bookCard = document.createElement("div");
+  bookCard.textContent = myLibrary[myLibrary.length - 1].name;
+  var bookList = document.getElementById("bookList");
+  bookList.appendChild(bookCard);
 }
 
 function Book(title, author, pages, read) {
@@ -30,8 +29,4 @@ function Book(title, author, pages, read) {
     read: this.read,
   };
   myLibrary.push(this.array);
-}
-
-function bookDisplay() {
-  myLibrary.forEach(console.log());
 }
