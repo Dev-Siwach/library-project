@@ -44,34 +44,16 @@
         <div id="radioDiv">
           <div>
             <input
-              type="radio"
-              name="bookReadStatus"
+              type="checkbox"
+              name="bookReadStatusTrue"
+              value="true"
               id="bookReadStatusTrue"
-              class="bookReadStatus"
-              checked
             />
-            <label
-              for="bookReadStatusTrue"
-              class="bookReadStatusLabel bookReadStatusLabel1"
-              >Read it</label
-            >
-          </div>
-          <div>
-            <input
-              type="radio"
-              name="bookReadStatus"
-              id="bookReadStatusFalse"
-              class="bookReadStatus"
-            />
-            <label
-              for="bookReadStatusFalse"
-              class="bookReadStatusLabel bookReadStatusLabel2"
-              >Haven't read it</label
-            >
+            <label for="bookReadStatusTrue">I have Read The Book</label>
           </div>
         </div>
         <div>
-          <button type="submit" id="addBookCardButton">Add</button>
+          <button type="button" id="addBookCardButton">Add</button>
           <button type="submit" formmethod="dialog">Close</button>
         </div>
       </form>
