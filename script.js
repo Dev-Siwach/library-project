@@ -1,9 +1,12 @@
-const myLibrary = [];
+const myLibrary = [{ name: "ABC", author: "abc", pages: 123, read: true }];
 
+/*
 document
   .getElementById("addBookButton")
   .addEventListener("click", addBookToLibrary);
+  */
 
+/*
 function addBookToLibrary() {
   var titleInput = prompt("What is the name of the book? ");
   var authorInput = prompt("Who is the author? ");
@@ -22,7 +25,9 @@ function addBookToLibrary() {
   var bookList = document.getElementById("bookList");
   bookList.appendChild(bookCard);
 }
+*/
 
+/*
 function Book(title, author, pages, read) {
   this.title = title;
   this.author = author;
@@ -36,3 +41,4 @@ function Book(title, author, pages, read) {
   };
   myLibrary.push(this.array);
 }
+*/
