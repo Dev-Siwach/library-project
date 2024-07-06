@@ -124,3 +124,107 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+/*------------------------*/
+* {
+  background-color: #eeedeb;
+}
+
+#header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #2f3645;
+  padding: 1rem 0;
+}
+
+#header > h1 {
+  margin: auto;
+  font-size: 3rem;
+  font-weight: bold;
+  background-color: transparent;
+  color: #eeedeb;
+}
+
+#header > button {
+  margin-right: 3vw;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.5rem 2rem;
+  font-size: 1.5rem;
+  transition: all 250ms;
+}
+
+#header > button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 1rem #eeedeb;
+}
+
+#addBookDialog {
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem 0.01rem #939185;
+  padding: 0;
+  background-color: #93b1a6;
+  max-height: 50vh;
+  max-width: 95vw;
+  margin-top: 35vh;
+}
+
+#addBookDialog > form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  background-color: #93b1a6;
+}
+
+#addBookDialog > form > div {
+  width: 100%;
+  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+
+#addBookDialog > form > div > label,
+#radioDiv > div > label {
+  font-size: 1.3rem;
+  background-color: transparent;
+}
+
+#addBookDialog > form > div > input {
+  border: 0.1rem solid black;
+  border-radius: 0.2rem;
+  height: 1.8rem;
+  min-height: auto;
+  min-width: auto;
+  font-size: 1.2rem;
+}
+
+#radioDiv > div {
+  background-color: transparent;
+}
+
+#addBookDialog > form > div > button {
+  margin: 0.5rem 3rem;
+  padding: 0.5rem 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem #183d3d;
+  transition: all 250ms;
+  box-sizing: border-box;
+}
+
+#addBookDialog > form > div > button:hover {
+  transform: scale(1.1);
+  box-shadow: none;
+  border: 0.004rem solid black;
+}

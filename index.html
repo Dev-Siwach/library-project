@@ -8,10 +8,74 @@
     <script src="./script.js" defer></script>
   </head>
   <body>
-    <div id="heading">
+    <div id="header">
       <h1>Your Books</h1>
+      <button id="openDialogBoxButton">Add Book</button>
     </div>
-    <div id="addBook"></div>
+    <dialog id="addBookDialog">
+      <form>
+        <div>
+          <label for="bookTitle"> Book Name</label>
+          <input
+            type="text"
+            name="bookTitle"
+            placeholder="eg : Harry Potter"
+            id="bookTitleInput"
+          />
+        </div>
+        <div>
+          <label for="bookAuthor">Author</label>
+          <input
+            type="text"
+            name="bookAuthor"
+            placeholder="eg : J.k. Rowling"
+            id="bookAuthorInput"
+          />
+        </div>
+        <div>
+          <label for="bookPages">Number of Pages</label>
+          <input
+            type="number"
+            name="bookPages"
+            placeholder="eg : 456"
+            id="bookPagesInput"
+          />
+        </div>
+        <div id="radioDiv">
+          <div>
+            <input
+              type="radio"
+              name="bookReadStatus"
+              id="bookReadStatusTrue"
+              class="bookReadStatus"
+              checked
+            />
+            <label
+              for="bookReadStatusTrue"
+              class="bookReadStatusLabel bookReadStatusLabel1"
+              >Read it</label
+            >
+          </div>
+          <div>
+            <input
+              type="radio"
+              name="bookReadStatus"
+              id="bookReadStatusFalse"
+              class="bookReadStatus"
+            />
+            <label
+              for="bookReadStatusFalse"
+              class="bookReadStatusLabel bookReadStatusLabel2"
+              >Haven't read it</label
+            >
+          </div>
+        </div>
+        <div>
+          <button type="submit" id="addBookCardButton">Add</button>
+          <button type="submit" formmethod="dialog">Close</button>
+        </div>
+      </form>
+    </dialog>
     <div id="bookList"></div>
   </body>
 </html>
