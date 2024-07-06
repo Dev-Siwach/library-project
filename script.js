@@ -12,7 +12,13 @@ function addBookToLibrary() {
   Book(titleInput, authorInput, pagesInput, readInput);
   console.table(myLibrary);
   var bookCard = document.createElement("div");
-  bookCard.textContent = myLibrary[myLibrary.length - 1].name;
+  bookCard.textContent =
+    myLibrary[myLibrary.length - 1].name +
+    " by " +
+    myLibrary[myLibrary.length - 1].author +
+    " have " +
+    myLibrary[myLibrary.length - 1].pages +
+    " pages .";
   var bookList = document.getElementById("bookList");
   bookList.appendChild(bookCard);
 }
