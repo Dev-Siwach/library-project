@@ -9,6 +9,7 @@
   </head>
   <body>
     <div id="header">
+      <button type="button" id="removeBookDialogButton">Remove Book</button>
       <h1>Your Books</h1>
       <button id="openDialogBoxButton">Add Book</button>
     </div>
@@ -55,6 +56,27 @@
         <div>
           <button type="button" id="addBookCardButton">Add</button>
           <button type="submit" formmethod="dialog">Close</button>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="removeBookDialog">
+      <form>
+        <div>
+          <div>
+            <div>Card no.</div>
+            <div>
+              <input
+                type="text"
+                name="cardNumber"
+                id="removeCardInput"
+                placeholder="eg : 1 or 4"
+              />
+            </div>
+          </div>
+          <div>
+            <button type="button" id="removeBookCardButton">Remove Card</button>
+            <button type="submit" formmethod="dialog">close</button>
+          </div>
         </div>
       </form>
     </dialog>

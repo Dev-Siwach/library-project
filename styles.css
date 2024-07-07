@@ -136,6 +136,7 @@ table {
   justify-content: space-between;
   background-color: #2f3645;
   padding: 1rem 0;
+  border-bottom: 0.11rem solid black;
 }
 
 #header > h1 {
@@ -147,9 +148,11 @@ table {
 }
 
 #header > button {
+  box-sizing: border-box;
   margin-right: 3vw;
-  border: none;
-  border-radius: 2rem;
+  margin-left: 3vw;
+  border: 0.1rem solid black;
+  border-radius: 0.5rem;
   padding: 0.5rem 2rem;
   font-size: 1.5rem;
   transition: all 250ms;
@@ -158,11 +161,13 @@ table {
 #header > button:hover {
   transform: scale(1.1);
   box-shadow: 0 0 1rem #eeedeb;
+  border: none;
 }
 
-#addBookDialog {
+#addBookDialog,
+#removeBookDialog {
   border: none;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   box-shadow: 0 0 1rem 0.01rem #939185;
   padding: 0;
   background-color: #93b1a6;
@@ -171,7 +176,8 @@ table {
   margin-top: 35vh;
 }
 
-#addBookDialog > form {
+#addBookDialog > form,
+#removeBookDialog > form {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -180,6 +186,34 @@ table {
   gap: 2rem;
   padding: 2rem 1rem;
   background-color: #93b1a6;
+}
+
+#removeBookDialog > form > div {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+#removeBookDialog > form > div > div {
+  background-color: transparent;
+  display: flex;
+  gap: 2rem;
+  font-size: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#removeBookDialog > form > div > div > div {
+  background-color: transparent;
+}
+
+#removeBookDialog > form > div > div > div > input {
+  border: none;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
 }
 
 #addBookDialog > form > div {
@@ -211,7 +245,8 @@ table {
   background-color: transparent;
 }
 
-#addBookDialog > form > div > button {
+#addBookDialog > form > div > button,
+#removeBookDialog > form > div > div > button {
   margin: 0.5rem 3rem;
   padding: 0.5rem 2rem;
   font-size: 1.5rem;
@@ -223,8 +258,62 @@ table {
   box-sizing: border-box;
 }
 
-#addBookDialog > form > div > button:hover {
+#addBookDialog > form > div > button:hover,
+#removeBookDialog > form > div > div > button:hover {
   transform: scale(1.1);
   box-shadow: none;
   border: 0.004rem solid black;
+}
+
+#addBookDialog::backdrop,
+#removeBookDialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/*-------------------------*/
+
+#bookList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: start;
+  gap: 3rem;
+  padding: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  padding: 2rem 2rem;
+  background-color: #2f3645;
+  color: #eeedeb;
+  box-sizing: border-box;
+  box-shadow: 0 0 3rem 0.1rem #2f3645;
+}
+
+.card > div {
+  background-color: transparent;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.cardHeading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.105rem;
+}
+
+.cardContent {
+  font-size: 1.5rem;
+  margin-bottom: 1.8rem;
+}
+
+.cardHeading0 {
+  font-size: 1rem;
+  margin-bottom: 2rem;
 }
