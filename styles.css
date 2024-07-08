@@ -170,7 +170,7 @@ table {
   border-radius: 0.5rem;
   box-shadow: 0 0 1rem 0.01rem #939185;
   padding: 0;
-  background-color: #93b1a6;
+  background-color: #2f3645;
   max-height: 50vh;
   max-width: 95vw;
   margin-top: 35vh;
@@ -185,7 +185,8 @@ table {
   align-items: start;
   gap: 2rem;
   padding: 2rem 1rem;
-  background-color: #93b1a6;
+  background-color: #2f3645;
+  color: #eeedeb;
 }
 
 #removeBookDialog > form > div {
@@ -210,10 +211,12 @@ table {
 }
 
 #removeBookDialog > form > div > div > div > input {
-  border: none;
-  padding: 0.4rem;
+  border: 0.1rem solid black;
   font-size: 1.2rem;
-  border-radius: 0.5rem;
+  border-radius: 0.2rem;
+  height: 1.8rem;
+  min-height: auto;
+  min-width: auto;
 }
 
 #addBookDialog > form > div {
@@ -261,7 +264,7 @@ table {
 #addBookDialog > form > div > button:hover,
 #removeBookDialog > form > div > div > button:hover {
   transform: scale(1.1);
-  box-shadow: none;
+  box-shadow: 0 0 1rem 0.1rem #eeedeb;
   border: 0.004rem solid black;
 }
 
